@@ -15,7 +15,8 @@ PROXY = {
 }
 
 today = ('1996/12/04')
-planet_dict = {'Saturn': ep.Saturn(today), 'Jupiter': ep.Jupiter(today),'Moon': ep.Moon(today),
+planet_dict = {
+                'Saturn': ep.Saturn(today), 'Jupiter': ep.Jupiter(today),'Moon': ep.Moon(today),
                 'Mars': ep.Mars(today), 'Venus': ep.Venus(today), 'Uranus': ep.Uranus(today),
                 'Neptune': ep.Neptune(today), 'Sun': ep.Sun(today)
  }
