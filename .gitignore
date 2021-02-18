@@ -1,0 +1,6 @@
+settings.py
+*.log
+venv/
+__pycache__/
+requirements.txt
+.vscode/*
