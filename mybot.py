@@ -33,9 +33,13 @@ def talk_me(update, context):
     print(text)
     update.message.reply_text(text)
 
+def start_manyplanet(update, context):
+     update.message.reply_text("Здравствуй, пользователь!Ты вызывал команду /planet")
+
+
 def  planet_start(update, context):
-    planet_name = update.message.text.split()[1]
-    ep_d = planet_dict.get(planet_name, None)
+    planet_name = update.message.text.split()[1] 
+    ep_d = planet_dict.get(planet_name, None) 
     if ep_d!=None:
         constellation = ep.constellation(planet_dict[planet_name])
         update.message.reply_text(constellation)
@@ -47,6 +51,7 @@ def main():
     dp = mybot.dispatcher
     dp.add_handler(CommandHandler("start", start_user))
     dp.add_handler(CommandHandler("planet", planet_start))
+    dp.add_handler(CommandHandler("planetstart", start_manyplanet))
     dp.add_handler(MessageHandler(Filters.text, talk_me))
     
 
