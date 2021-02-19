@@ -7,10 +7,10 @@ logging.basicConfig(filename="bot.log", format='%(levelname)s -%(asctime)s -%(me
 
 
 PROXY = {
-    'proxy_url': 'socks5://t1.learn.python.ru:1080',
+    'proxy_url': 'settings.PROXY_URL',
     'urllib3_proxy_kwargs': {
-        'username': 'learn',
-        'password': 'python'
+        'username': 'settings.PROXY_USERNAME',
+        'password': 'settings.PROXY_PASSWORD'
     }
 }
 
