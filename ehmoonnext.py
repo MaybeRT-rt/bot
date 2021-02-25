@@ -9,9 +9,9 @@ logging.basicConfig(filename="bot.log", format='%(levelname)s -%(asctime)s -%(me
 
 
 def next_full_moon(update, context):
-    moon = update.message.text.split()[1]
-    moon = moon.replace('.', '/')
-    moon_next = ep.next_full_moon(moon)
+    data = update.message.text.split()[1]
+    data = data.replace('.', '/')
+    moon_next = ep.next_full_moon(data)
     update.message.reply_text(f' Ближайшее полнолуние: {moon_next}')
 
 def main():
