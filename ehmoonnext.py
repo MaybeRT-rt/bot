@@ -5,6 +5,7 @@ from mybot import start_user
 import ephem as ep
 
 
+logging.basicConfig(filename="bot.log", format='%(levelname)s -%(asctime)s -%(message)s', level=logging.INFO) 
 
 
 def next_full_moon(update, context):
